@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Weather View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Weather_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WeatherViewController" customModule="Weather_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,7 +98,7 @@
                                                 <color key="backgroundColor" systemColor="systemFillColor"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="go"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTN-IR-NfZ">
                                                 <rect key="frame" x="335" y="0.99999999999999645" width="35" height="33.333333333333329"/>
@@ -110,6 +110,9 @@
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" backgroundImage="magnifyingglass" catalog="system"/>
+                                                <connections>
+                                                    <action selector="searchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oih-zp-Azf"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -134,6 +137,12 @@
                             <constraint firstItem="TWJ-HW-Ae8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yJa-D7-5Ki"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="bHZ-ug-ng6" id="sLD-1h-rNY"/>
+                        <outlet property="descriptionLabel" destination="BCz-tP-JLw" id="8hX-Z5-Ay4"/>
+                        <outlet property="searchTextField" destination="UGq-f9-bIb" id="Qgb-FI-YFE"/>
+                        <outlet property="temperatureLabel" destination="mVi-an-OT0" id="92S-bP-XnT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
