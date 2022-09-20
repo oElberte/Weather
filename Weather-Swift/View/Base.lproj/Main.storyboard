@@ -16,11 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="laj-2z-cnI">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TWJ-HW-Ae8">
                                 <rect key="frame" x="0.0" y="44" width="390" height="766"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bz0-av-dWa" userLabel="Temperature">
-                                        <rect key="frame" x="84.666666666666686" y="0.0" width="221" height="360.33333333333331"/>
+                                        <rect key="frame" x="84.666666666666686" y="0.0" width="221" height="365"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun.max" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cf0-20-0Ax" userLabel="Condition Image View">
                                                 <rect key="frame" x="35.333333333333329" y="0.0" width="150" height="150"/>
@@ -65,8 +68,11 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCz-tP-JLw">
-                                                <rect key="frame" x="89.666666666666671" y="340" width="41.333333333333329" height="20.333333333333314"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clear sky" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCz-tP-JLw" userLabel="Description">
+                                                <rect key="frame" x="75.333333333333343" y="340" width="70.333333333333343" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="y96-Zl-dJd"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -117,20 +123,25 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="laj-2z-cnI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="349-fg-isl"/>
                             <constraint firstItem="TWJ-HW-Ae8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6iT-KZ-4NX"/>
                             <constraint firstItem="TWJ-HW-Ae8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B6Q-h9-4Wi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TWJ-HW-Ae8" secondAttribute="bottom" id="EoL-eo-4uD"/>
+                            <constraint firstItem="laj-2z-cnI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Iqc-Ut-Kd9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TWJ-HW-Ae8" secondAttribute="trailing" id="UVF-H2-T7i"/>
+                            <constraint firstAttribute="bottom" secondItem="laj-2z-cnI" secondAttribute="bottom" id="hd1-qG-rMq"/>
+                            <constraint firstItem="laj-2z-cnI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hxw-t3-l23"/>
                             <constraint firstItem="TWJ-HW-Ae8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yJa-D7-5Ki"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="97.767857142857139"/>
+            <point key="canvasLocation" x="130.76923076923077" y="97.393364928909946"/>
         </scene>
     </scenes>
     <resources>
+        <image name="background" width="662" height="662"/>
         <image name="location" catalog="system" width="128" height="118"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="sun.max" catalog="system" width="128" height="124"/>
