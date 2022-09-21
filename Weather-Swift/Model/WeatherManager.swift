@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 //Delegate used to send informations to Weather View Controller
 protocol WeatherManagerDelegate {
@@ -19,8 +20,16 @@ struct WeatherManager {
     var delegate: WeatherManagerDelegate?
     
     //Completes the URL that user enters in the search text field
-    func fetchWeather(from cityName: String) {
+    func fetchWeather(from city: String) {
+        //Used to add "+" in the city name and fix the URL of cities with space between the names
+        let cityName = city.replacingOccurrences(of: " ", with: "+")
         let urlString = "\(weatherURL)&q=\(cityName)"
+        performRequest(with: urlString)
+    }
+    
+    //Used for the actual location of the user
+    func fetchWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
+        let urlString = "\(weatherURL)&lat=\(latitude)&lon=\(longitude)"
         performRequest(with: urlString)
     }
     

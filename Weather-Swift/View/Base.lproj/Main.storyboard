@@ -92,6 +92,9 @@
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" backgroundImage="location" catalog="system"/>
+                                                <connections>
+                                                    <action selector="locationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gfJ-yp-8qJ"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UGq-f9-bIb">
                                                 <rect key="frame" x="45" y="0.0" width="280" height="35"/>
@@ -141,6 +144,7 @@
                         <outlet property="cityLabel" destination="bHZ-ug-ng6" id="sLD-1h-rNY"/>
                         <outlet property="conditionImageView" destination="cf0-20-0Ax" id="ysG-wh-Xbd"/>
                         <outlet property="descriptionLabel" destination="BCz-tP-JLw" id="8hX-Z5-Ay4"/>
+                        <outlet property="locationButton" destination="zqo-L3-nb7" id="c1v-c0-KPj"/>
                         <outlet property="searchTextField" destination="UGq-f9-bIb" id="Qgb-FI-YFE"/>
                         <outlet property="temperatureLabel" destination="mVi-an-OT0" id="92S-bP-XnT"/>
                     </connections>
